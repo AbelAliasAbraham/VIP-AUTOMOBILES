@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body {
+      background-image: url('https://previews.123rf.com/images/o0matze0o/o0matze0o1805/o0matze0o180500018/101535114-website-and-internet-contact-us-page-concept-with-hanging-icons-in-front-of-a-silver-background.jpg');
+      background-repeat: no-repeat;
+      background-size: 1500px 600px;
+    }
+  </style>
+
+  <title>Contact Us</title>
+</head>
+
+<body>
+  <center>
+    <font face="American Typewriter" size="7" color="#FF1B00">
+      <b><u>Contact Us</u></b>
+    </font><br><br><br><br>
+
+    <form action="" method="" target="">
+      <table>
+        <tr>
+          <td><font size=4 color="#001BFF"><label>First Name:</label></td>
+          <td><input type="text" name="text" id="t1" placeholder="Enter your firstname"></td>
+        </tr>
+        <tr>
+          <td><font size=4 color="#001BFF"><label>Last Name:</label></td>
+          <td><input type="text" name="text" id="t2" placeholder="Enter your lastname"></td>
+        </tr>
+        <tr>
+          <td><font size=4 color="#001BFF"><label>Email ID: </label></td>
+          <td><input type="email" name="text" id="t3" placeholder="xyz@gmail.com"></td>
+        </tr>
+        <tr>
+          <td><font size=4 color="#001BFF"><label>Mobile Number: </label></td>
+          <td><input type="number" name="text" id="t4" placeholder="1234567890"></td>
+        </tr>
+        <tr>
+          <td><font size=4 color="#001BFF"><label>Queries:</label></td>
+          <td><textarea rows="7" cols="30"></textarea></td>
+        </tr>
+        
+      </table><br><br>
+      <input type='button' name='button' value='Submit' onclick="submitForm()">
+    </form>
+
+  </center>
+
+  <script>
+          function submitForm() {
+        var firstName = document.getElementById("t1").value;
+        var lastName = document.getElementById("t2").value;
+        var email = document.getElementById("t3").value;
+        var mobileNumber = document.getElementById("t4").value;
+        var queries = document.querySelector("textarea").value;
+
+        if (firstName === "" || lastName === "" || email === "" || mobileNumber === "" || queries === "") {
+          alert("Please fill in all the fields.");
+        } else {
+          alert("Thank you for reaching out. We will respond to your queries via the provided email address: " + email);
+          // You can add further code here to submit the form data to a server or perform other actions.
+        }
+      }
+  </script>
+</body>
+</html>
